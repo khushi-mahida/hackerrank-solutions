@@ -1,0 +1,16 @@
+# ──────────────────────────────────────────────────
+# Link        https://www.hackerrank.com/challenges/np-eye-and-identity/problem?isFullScreen=true
+# Problem     Eye and Identity
+# Difficulty  Easy
+# Subdomain   Numpy
+# Platform    HackerRank
+# Language    pypy3
+# Status      Accepted
+# Submitted   2026-08-28, 10:22 p.m.
+# ──────────────────────────────────────────────────
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+import numpy as np
+np.set_printoptions(legacy='1.13')
+n,m = map (int,input().split())
+print( np.eye(n,m,k=0))
