@@ -1,0 +1,31 @@
+# ──────────────────────────────────────────────────
+# Link        https://www.hackerrank.com/challenges/np-array-mathematics/problem?isFullScreen=true
+# Problem     Array Mathematics
+# Difficulty  Easy
+# Subdomain   Numpy
+# Platform    HackerRank
+# Language    pypy3
+# Status      Accepted
+# Submitted   2026-08-28, 10:36 p.m.
+# ──────────────────────────────────────────────────
+
+
+import numpy as np
+import sys
+
+
+n, _ = map(int, input().split())
+
+
+all_rows = [list(map(int, line.split())) for line in sys.stdin.read().splitlines()]
+
+
+A = np.array(all_rows[:n])
+B = np.array(all_rows[n:])
+
+print(np.add(A, B))
+print(np.subtract(A, B))
+print(np.multiply(A, B))
+print(np.floor_divide(A, B)) 
+print(np.mod(A, B))
+print(np.power(A, B))
