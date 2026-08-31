@@ -1,0 +1,36 @@
+# ──────────────────────────────────────────────────
+# Link        https://www.hackerrank.com/challenges/nested-list/problem?isFullScreen=true
+# Problem     Nested Lists
+# Difficulty  Easy
+# Subdomain   Basic Data Types
+# Platform    HackerRank
+# Language    pypy3
+# Status      Accepted
+# Submitted   2026-08-31, 07:28 p.m.
+# ──────────────────────────────────────────────────
+
+if __name__ == '__main__':
+    students = []
+    
+    # Read the inputs
+    for _ in range(int(input())):
+        name = input()
+        score = float(input())
+        students.append([name, score])
+    
+    # 1. Gather all unique grades and sort them
+    unique_grades = sorted(list(set([student[1] for student in students])))
+    second_lowest_grade = unique_grades[1]
+    
+    # 2. Collect names of all students sharing that exact grade
+    runner_up_names = [student[0] for student in students if student[1] == second_lowest_grade]
+    
+    # 3. Sort the names alphabetically
+    runner_up_names.sort()
+    
+    # 4. Use a slice [-2:] to filter down to only the last 2 names in the list
+    last_two_names = runner_up_names[-2:]
+    
+    # 5. Print them out
+    for name in last_two_names:
+        print(name)
