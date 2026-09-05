@@ -1,0 +1,21 @@
+# ──────────────────────────────────────────────────
+# Link        https://www.hackerrank.com/challenges/python-power-mod-power/problem?isFullScreen=true
+# Problem     Power - Mod Power
+# Difficulty  Easy
+# Subdomain   Math
+# Platform    HackerRank
+# Language    pypy3
+# Status      Accepted
+# Submitted   2026-09-05, 09:51 p.m.
+# ──────────────────────────────────────────────────
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+a = int(input())
+b = int(input())
+m = int(input())
+
+# First line: print standard power (a raised to b)
+print(pow(a, b))
+
+print(pow(a, b, m))
